@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from tkinter import *   
 from functools import partial  
-
+from help import help_page
 
 def average_result(result_label, n1,n2, n3):
     num1 = (n1.get())
@@ -83,6 +83,12 @@ img_label= Label(image=click_btn_img)
 CalculateBut = Button(window, image= click_btn_img,bg="#1068a4",activebackground="#1068a4", command=average_result, height=150, width=500, borderwidth=0, highlightthickness=0)
 CalculateBut.pack(expand=YES)
 
+menu_bar = Menu(window)
+file_menu = Menu(menu_bar, tearoff=0)
+file_menu.add_command(label="Nouveau", command=help_page)
+menu_bar.add_cascade(label="Fichier", menu=file_menu)
+
+window.config(menu=menu_bar)
 
 
 window.mainloop()
