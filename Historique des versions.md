@@ -9,4 +9,5 @@ V1 du projet :
 V1.2 du projet :
 
 -Ajout d'un menu de navigation
+
 -Ajout d'une fenêtre qui guide vers le GitHub du projet
